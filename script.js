@@ -46,3 +46,6 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 sections.forEach(section => observer.observe(section));
+
+
+// Contact form: compose the message in the visitor's email app. No third-party service is required.\ndocument.getElementById('contactForm')?.addEventListener('submit', (event) => {\n  event.preventDefault();\n  const form = event.currentTarget;\n  const name = form.name.value.trim();\n  const email = form.email.value.trim();\n  const subject = form.subject.value.trim();\n  const message = form.message.value.trim();\n  const body = 'Name: ' + name + '\\nEmail: ' + email + '\\n\\n' + message;\n  window.location.href = 'mailto:nishubharti7948@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);\n});\n
